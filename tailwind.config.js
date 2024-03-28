@@ -40,7 +40,6 @@ export default {
         lineHeight: '100%',
         fontWeight: '800' }],
     },
-  },
     extend: {
       colors: {
         'blue-light': '#8FB2F5',
@@ -56,5 +55,7 @@ export default {
         'white': '#FFFFFF',
       },
     },
+  },
+
   plugins: [],
 }
