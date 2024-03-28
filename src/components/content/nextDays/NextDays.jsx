@@ -1,9 +1,9 @@
 import Day from "./Day.jsx";
-import icon1 from "/src/ui/weather-icons/Weather=Rain, Moment=Night.svg"
-import icon2 from "/src/ui/weather-icons//Weather=Cloudy, Moment=Day.svg"
-import icon3 from "/src/ui/weather-icons/Weather=Rain, Moment=Day.svg"
-import icon4 from "/src/ui/weather-icons/Weather=Few clouds, Moment=Day.svg"
-import icon5 from "/src/ui/weather-icons/Weather=Storm, Moment=Day.svg"
+import icon1 from "/src/ui/weather-icons/Moon.png"
+import icon2 from "/src/ui/weather-icons/sun clouds-1.png"
+import icon3 from "/src/ui/weather-icons/Moon,stars and cloud.png"
+import icon4 from "/src/ui/weather-icons/sun rain.png"
+import icon5 from "/src/ui/weather-icons/Thunder.png"
 function NextDays() {
     return(
         <>

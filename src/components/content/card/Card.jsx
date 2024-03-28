@@ -1,5 +1,5 @@
 import weatherImage from '/src/ui/images/Weather=Rain, Moment=Day.png'
-import icon from "/src/components/icon.svg"
+import icon from "/src/ui/weather-icons/moon and rain.png"
 
 function Content() {
     return(
@@ -21,8 +21,8 @@ function Content() {
                                 <p className="text-sm">few cloud</p>
                             </div>
                         </div>
-                        <div className="w-40 h-40 p-5">
-                            <img src={icon} alt="ixon"/>
+                        <div className="w-40 h-40 p-3 flex justify-center items-center overflow-hidden">
+                            <img className="w-40 h-40" src={icon} alt="ixon"/>
                         </div>
                     </div>
                 </div>
