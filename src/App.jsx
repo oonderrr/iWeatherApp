@@ -4,7 +4,7 @@ import Search from "./components/search/Search.jsx";
 function App() {
   return (
       <>
-        <Search />
+        <Content city="eskişehir"/>
       </>
   )
 }

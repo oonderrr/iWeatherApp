@@ -1,6 +1,6 @@
 import Day from "./Day.jsx";
 import icon1 from "/src/ui/weather-icons/Moon.png"
-import icon2 from "/src/ui/weather-icons/sun clouds-1.png"
+import icon2 from "/src/ui/weather-icons/sun clouds.png"
 import icon3 from "/src/ui/weather-icons/Moon,stars and cloud.png"
 import icon4 from "/src/ui/weather-icons/sun rain.png"
 import icon5 from "/src/ui/weather-icons/Thunder.png"

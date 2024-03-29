@@ -1,4 +1,8 @@
+import {useContext} from "react";
+import {MyContext} from "../Content.jsx";
+
 function Day({name, iconSrc}) {
+    const cityData = useContext(MyContext);
     return(
         <>
             <div className="w-[67px] h-full flex flex-col gap-1 justify-center items-center">
@@ -7,8 +11,8 @@ function Day({name, iconSrc}) {
                     <img src={iconSrc} alt="icon"/>
                 </div>
                 <div>
-                <p className="text-heading-xs text-gray-100">32 c</p>
-                    <p className="text-heading-xs text-gray-400">26 c</p>
+                <p className="text-heading-xs text-gray-100">{parseInt(cityData.main.temp_max)}°c</p>
+                    <p className="text-heading-xs text-gray-400">{parseInt(cityData.main.temp_min)}°c</p>
                 </div>
             </div>
         </>

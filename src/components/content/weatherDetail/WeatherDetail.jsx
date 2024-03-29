@@ -5,14 +5,19 @@ import icon4 from "/src/ui/phosphor-icon/Type=spinner-gap-regular.svg"
 import icon5 from "/src/ui/phosphor-icon/Type=sun-dim-light.svg"
 
 import ListItem from "./ListItem.jsx";
+
+import {useContext} from "react";
+import {MyContext} from "../Content.jsx";
+
 function WeatherDetail() {
+    const cityData = useContext(MyContext);
     return(
         <>
             <div className="w-[359px] h-[292px] bg-gray-800 px-4 py-1 rounded-xl">
                 <ListItem
                     icon={icon1}
                     title="Thermal sensation"
-                    details="26 c"
+                    details={`${parseInt(cityData.main.feels_like)}°c`}
                     border="border-b-gray-700"/>
                 <ListItem
                     icon={icon2}
@@ -22,12 +27,12 @@ function WeatherDetail() {
                 <ListItem
                     icon={icon3}
                     title="Wind speed"
-                    details="5 km/h"
+                    details={`${parseInt(cityData.wind.speed)} km/h`}
                     border="border-b-gray-700"/>
                 <ListItem
                     icon={icon4}
                     title="Air humidity"
-                    details="40%"
+                    details={`${parseInt(cityData.main.humidity)}%`}
                     border="border-b-gray-700"/>
                 <ListItem
                     icon={icon5}
