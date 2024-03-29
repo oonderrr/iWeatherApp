@@ -7,7 +7,7 @@ import icon5 from "/src/ui/weather-icons/Thunder.png"
 function NextDays() {
     return(
         <>
-            <div className="w-[359px] h-[176px] bg-gray-800 rounded-xl flex">
+            <div className="w-[359px] h-[176px] bg-gray-800 rounded-xl flex justify-center">
                 <Day name="Mon" iconSrc={icon1}/>
                 <Day name="Tue" iconSrc={icon2}/>
                 <Day name="Wed" iconSrc={icon3}/>
