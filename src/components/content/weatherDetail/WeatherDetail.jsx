@@ -13,7 +13,7 @@ function WeatherDetail() {
     const cityData = useContext(MyContext);
     return(
         <>
-            <div className="w-[359px] h-[292px] bg-gray-800 px-4 py-1 rounded-xl">
+            <div className="w-[359px] h-[292px] lg:w-[400px] lg:h-[328px] bg-gray-800 px-4 py-1 rounded-xl">
                 <ListItem
                     icon={icon1}
                     title="Thermal sensation"

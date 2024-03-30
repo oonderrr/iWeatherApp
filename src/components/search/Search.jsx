@@ -50,7 +50,7 @@ function Search() {
                     </div>
                 </div>
                 <div className="h-screen w-full flex flex-col items-center justify-center">
-                    <div className="w-[311px] h-[140px] flex flex-col justify-between">
+                    <div className="w-4/6 sm:w-1/2 h-[140px] flex flex-col justify-between">
                         <div>
                             <p className="text-heading-md text-white text-center flex justify-center">Welcome to <p className="text-blue-light ml-1">TypeWeather</p> </p>
                             <p className="text-sm text-gray-200 text-center">Choose a location to see the weather forecast</p>
@@ -67,7 +67,7 @@ function Search() {
                             </button>
                         </div>
                     </div>
-                    <div className="w-[311px] h-[270px] rounded-lg overflow-auto mt-2">
+                    <div className="w-4/6 sm:w-1/2 h-[270px] rounded-lg overflow-auto mt-2">
                         {
                             list ?
                                 search.length > 0 ?
@@ -82,16 +82,14 @@ function Search() {
                                             return (
                                                 <button
                                                     onClick={() => handleCityClick(res.name, res.country)}
-                                                    className="w-[311px] h-[54px] bg-gray-500 text-md hover:bg-gray-400 duration-300 text-white shadow-xl text-start pl-4 mb-[1px]"
+                                                    className="w-full h-[54px] bg-gray-500 text-md hover:bg-gray-400 duration-300 text-white shadow-xl text-start pl-4 mb-[1px]"
                                                     key={res.name}
                                                     >
                                                         {res.name}, {res.country}
                                                 </button>
                                             )
                                         })
-                                    : <button className="w-[311px] h-[54px] rounded-lg bg-blue-light hover:bg-blue-400 active:bg-blue-500 duration-300 text-white">
-                                        Konumunuzu kullanmak ister misin?
-                                        </button>
+                                    : ""
                                 : ""
                         }
                     </div>

@@ -40,8 +40,11 @@ function Content({ city }) {
                 <div className="h-screen w-full bg-gray-900 p-5 flex flex-col justify-center items-center gap-2">
                     {isLoading ? (<p className="text-white text-md">Hava durumu verileri yükleniyor...</p>) : (
                         <>
-                            <Card/>
-                            <WeatherDetail/>
+                            <div className="lg:flex lg:gap-2">
+                                <Card/>
+                                <WeatherDetail/>
+                            </div>
+
                             <NextDays/>
                         </>
                         )
