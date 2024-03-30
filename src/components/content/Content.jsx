@@ -30,8 +30,6 @@ function Content({ city }) {
 
     console.log(state)
 
-
-
     return(
         <>
 
@@ -47,13 +45,9 @@ function Content({ city }) {
                             <NextDays/>
                         </>
                         )
-
                     }
-
-
                 </div>}
             </MyContext.Provider>
-
         </>
     )
 }
