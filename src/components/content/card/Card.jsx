@@ -24,7 +24,7 @@ function Content() {
                         <p className="text-xs">{formattedDate}</p>
                     </div>
                     <div className="flex justify-between">
-                        <div className="text-white w-[105px] h-[116px] ml-4 mt-7 p-1 flex flex-col justify-between">
+                        <div className="text-white w-[115px] h-[116px] ml-4 mt-7 p-1 flex flex-col justify-between">
                             <div>
                                 <p className="text-heading-xl">{parseInt(cityData.main.temp)}°c</p>
                             </div>

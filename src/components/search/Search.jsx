@@ -8,12 +8,27 @@ function Search() {
     const [name, setName] = useState([]);
     const [search, setSearch] = useState("");
     const [page, setPage] = useState(true);
+    const [cityName, setCityName] = useState("");
+    const [list, setList] = useState(true);
 
     useEffect(() => {
         axios.get('/cities.json')
             .then(response => {setName(response.data)})
     },[]);
 
+    const inputElement = document.getElementById("inputSearch");
+
+    function handleCityClick(cityName, country) {
+        inputElement.value = `${cityName}, ${country}`;
+        setCityName(cityName)
+        setList(false)
+    }
+
+    useEffect(() => {
+        if (inputElement.value.length === 0){
+            setList(true)
+        }
+    }, [inputElement.value]);
 
     return(
         <>
@@ -30,7 +45,7 @@ function Search() {
                             <p className="text-heading-md text-white text-center">Welcome to TypeWeather</p>
                             <p className="text-sm text-gray-200 text-center">Choose a location to see the weather forecast</p>
                         </div>
-                        <div className="flex">
+                        <div className="flex h-14 w-full rounded-lg bg-[#1E1E29]">
                             <input className="h-14 w-full rounded-lg bg-[#1E1E29] p-5 focus:outline-none text-md text-white
                                               placeholder:text-md placeholder:text-gray-400"
                                    placeholder="Serach loaction"
@@ -42,28 +57,32 @@ function Search() {
                     </div>
                     <div className="w-[311px] h-[270px] rounded-lg overflow-auto mt-2">
                         {
-                            search.length > 0 ?
-                                name.filter((item) => {
-                                    if (search.length === ""){
-                                        return item;
-                                    }else if(item.name.toLowerCase().startsWith(search.toLowerCase())){
-                                        return item;
-                                    }
-                                })
-                                    .map(res => {
-                                        return (
-                                            <button
-                                            className="w-full h-[54px] bg-gray-500 text-md text-white hover:bg-gray-400 text-start pl-4 mb-[1px]"
-                                            key={res.name}
-                                            >
-                                                {res.name}, {res.country}
-                                            </button>
-                                        )
-                                    }) : ""
+                            list ?
+                                search.length > 0 ?
+                                    name.filter((item) => {
+                                        if (search.length === ""){
+                                            return item;
+                                        }else if(item.name.toLowerCase().startsWith(search.toLowerCase())){
+                                            return item;
+                                        }
+                                    })
+                                        .map(res => {
+                                            return (
+                                                <button
+                                                    onClick={() => handleCityClick(res.name, res.country)}
+                                                    className="w-[311px] h-[54px] bg-gray-500 text-md hover:bg-gray-400 duration-300 text-white shadow-xl text-start pl-4 mb-[1px]"
+                                                    key={res.name}
+                                                    >
+                                                        {res.name}, {res.country}
+                                                </button>
+                                            )
+                                        })
+                                    : <button className="w-[311px] h-[54px] rounded-lg bg-blue-light hover:bg-blue-400 active:bg-blue-500 duration-300 text-white">Konumunu kullanmak ister misin?</button>
+                                : ""
                         }
                     </div>
                 </div>
-            </div> : <Content city={search}/>}
+            </div> : <Content city={cityName}/>}
         </>
     )
 }

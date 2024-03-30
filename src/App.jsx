@@ -5,7 +5,7 @@ import ErrorPage from "./components/errorPage/ErrorPage.jsx";
 function App() {
   return (
       <>
-        <Search/>
+        <Search />
       </>
   )
 }
