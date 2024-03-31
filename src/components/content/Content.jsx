@@ -40,9 +40,12 @@ function Content({ city }) {
                                     onClick={() => {window.location.reload();}}>
                                 Home
                             </button>
-                            {isLoading ? (<p className="text-white text-md">Hava durumu verileri yükleniyor...</p>) : (
+                            {isLoading ? (
+                                <div className="flex flex-col justify-center items-center gap-2 h-full">
+                                    <p className="text-white text-md">Hava durumu verileri yükleniyor...</p>
+                                </div>) : (
                                 <>
-                                    <div className="flex flex-col justify-center items-center gap-2 h-full">
+                                <div className="flex flex-col justify-center items-center gap-2 h-full">
                                         <div className="lg:flex lg:gap-2">
                                             <Card/>
                                             <WeatherDetail/>
