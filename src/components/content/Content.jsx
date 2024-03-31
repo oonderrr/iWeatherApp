@@ -5,7 +5,7 @@ import {createContext} from "react";
 import axios from "axios";
 import {useEffect, useState} from "react";
 import ErrorPage from "../errorPage/ErrorPage.jsx";
-
+import arrow from "/src/ui/icon/arrow-right-solid.svg"
 export const MyContext = createContext(null);
 
 function Content({ city }) {
@@ -35,10 +35,10 @@ function Content({ city }) {
                 {
                     error ? <ErrorPage /> :
 
-                        <div className="h-screen w-full bg-gray-900 p-5">
-                            <button className="w-20 h-10 mt-5 ml-5 bg-blue-light hover:bg-blue-400 active:bg-blue-500 rounded-lg duration-500"
+                        <div className="h-screen w-full overflow-auto bg-gray-900 p-5">
+                            <button className="w-8 mt-5 ml-5 absolute"
                                     onClick={() => {window.location.reload();}}>
-                                Home
+                                <img className="rotate-180 hover:opacity-80 duration-300" src={arrow} alt="icon"/>
                             </button>
                             {isLoading ? (
                                 <div className="flex flex-col justify-center items-center gap-2 h-full">

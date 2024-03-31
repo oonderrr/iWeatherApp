@@ -15,7 +15,7 @@ function Search() {
     const [spinner, setSpinner] = useState(true);
 
     useEffect(() => {
-        axios.get('/cities.json')
+        axios.get('/public/cities.json')
             .then(response => {setName(response.data)})
     },[]);
 
