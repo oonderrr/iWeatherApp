@@ -5,19 +5,14 @@ import {useEffect, useState} from "react";
 import Content from "../content/Content.jsx";
 import arrow from "/src/ui/icon/arrow-right-solid.svg"
 import spin from "/src/ui/icon/spinner-solid.svg"
+import { Items } from "./MyCitiesDB.jsx";
 
 function Search() {
-    const [name, setName] = useState([]);
     const [search, setSearch] = useState("");
     const [page, setPage] = useState(true);
     const [cityName, setCityName] = useState("");
     const [list, setList] = useState(true);
     const [spinner, setSpinner] = useState(true);
-
-    useEffect(() => {
-        axios.get('/public/cities.json')
-            .then(response => {setName(response.data)})
-    },[]);
 
     function handleCityClick(cityName, country) {
         const inputElement = document.getElementById("inputSearch");
@@ -75,7 +70,7 @@ function Search() {
                         {
                             list ?
                                 search.length > 0 ?
-                                    name.filter((item) => {
+                                    Items.filter((item) => {
                                         if (search.length === ""){
                                             return item;
                                         }else if(item.name.toLowerCase().startsWith(search.toLowerCase())){
