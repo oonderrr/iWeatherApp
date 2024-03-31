@@ -114,8 +114,8 @@ function Content() {
                                 <p className="text-sm">{cityData.weather[0].description}</p>
                             </div>
                         </div>
-                        <div className="w-40 h-40 p-3 flex justify-center items-center">
-                            <img className="w-40 h-40 object-cover" src={icon} alt="ixon"/>
+                        <div className="w-40 h-40 md:p-3 flex justify-center items-center overflow-hidden">
+                            <img className="w-36 h-36 md:w-40 md:h-40 object-cover md:absolute" src={icon} alt="ixon"/>
                         </div>
                     </div>
                 </div>
