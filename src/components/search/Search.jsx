@@ -66,7 +66,7 @@ function Search() {
                             </button>
                         </div>
                     </div>
-                    <div className="w-4/6 sm:w-1/2 h-[270px] rounded-lg overflow-auto mt-2">
+                    <div className="w-5/6 sm:w-1/2 h-[270px] rounded-lg overflow-auto mt-2">
                         {
                             list ?
                                 search.length > 0 ?

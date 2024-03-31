@@ -36,7 +36,7 @@ function Content({ city }) {
                     error ? <ErrorPage /> :
 
                         <div className="h-screen w-full overflow-auto bg-gray-900 p-5">
-                            <button className="w-8 m-2 sm:absolute"
+                            <button className="w-8 m-2 sm:absolute flex justify-center items-center"
                                     onClick={() => {window.location.reload();}}>
                                 <img className="rotate-180 hover:opacity-80 duration-300" src={arrow} alt="icon"/>
                             </button>
