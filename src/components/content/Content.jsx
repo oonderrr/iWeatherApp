@@ -28,8 +28,6 @@ function Content({ city }) {
         fetchData()
     },[]);
 
-    console.log(state)
-
     return(
         <>
 
@@ -37,19 +35,25 @@ function Content({ city }) {
                 {
                     error ? <ErrorPage /> :
 
-                <div className="h-screen w-full bg-gray-900 p-5 flex flex-col justify-center items-center gap-2">
-                    {isLoading ? (<p className="text-white text-md">Hava durumu verileri yükleniyor...</p>) : (
-                        <>
-                            <div className="lg:flex lg:gap-2">
-                                <Card/>
-                                <WeatherDetail/>
-                            </div>
+                        <div className="h-screen w-full bg-gray-900 p-5">
+                            <button className="w-20 h-10 mt-5 ml-5 bg-blue-light hover:bg-blue-400 active:bg-blue-500 rounded-lg duration-500"
+                                    onClick={() => {window.location.reload();}}>
+                                Home
+                            </button>
+                            {isLoading ? (<p className="text-white text-md">Hava durumu verileri yükleniyor...</p>) : (
+                                <>
+                                    <div className="flex flex-col justify-center items-center gap-2 h-full">
+                                        <div className="lg:flex lg:gap-2">
+                                            <Card/>
+                                            <WeatherDetail/>
+                                        </div>
+                                        <NextDays/>
+                                    </div>
 
-                            <NextDays/>
-                        </>
-                        )
-                    }
-                </div>}
+                                </>)
+                            }
+                        </div>
+                }
             </MyContext.Provider>
         </>
     )

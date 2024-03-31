@@ -36,10 +36,9 @@ function Content() {
         day: "numeric",
         year: "numeric",
     });
-debugger
+
     useEffect(() => {
         if ((cityData.dt >= cityData.sys.sunrise) && (cityData.sys.sunset >= cityData.dt)){
-            console.log("gündüz")
             switch (cityData.weather[0].main) {
                 case "Clear":
                     setBackground(dayClear);
@@ -67,7 +66,6 @@ debugger
                     break;
             }
         } else {
-            console.log("gece")
             switch (cityData.weather[0].main) {
                 case "Clear":
                     setBackground(nightClear);

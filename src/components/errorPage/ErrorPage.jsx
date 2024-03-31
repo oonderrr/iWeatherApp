@@ -15,8 +15,8 @@ function ErrorPage() {
                         <img className="h-full" src={logo} alt="logo"/>
                     </div>
                 </div>
-                <div className="h-screen w-full flex flex-col items-center justify-center text-white">
-                    <p>Eksik veya hatalı tuşladınız.</p>
+                <div className="h-screen w-full flex flex-col items-center justify-center text-white p-7">
+                    <p className="text-center">Sorry, there was an error on our site. We are working to solve the problem. Please try again later.</p>
                     <button className="w-20 h-10 hover:w-24 hover:h-12 hover:text-lg bg-blue-light rounded-lg duration-500"
                             onClick={() => {setState(false)}}>
                         Home
