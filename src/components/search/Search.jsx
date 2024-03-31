@@ -49,7 +49,7 @@ function Search() {
                     </div>
                 </div>
                 <div className="h-screen w-full flex flex-col items-center justify-center">
-                    <div className="w-4/6 sm:w-1/2 h-[140px] flex flex-col justify-between">
+                    <div className="w-5/6 sm:w-1/2 h-[140px] flex flex-col justify-between">
                         <div>
                             <p className="text-heading-md text-white text-center flex justify-center">Welcome to <p className="text-blue-light ml-1">TypeWeather</p> </p>
                             <p className="text-sm text-gray-200 text-center">Choose a location to see the weather forecast</p>
