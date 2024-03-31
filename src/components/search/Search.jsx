@@ -34,6 +34,10 @@ function Search() {
     }, [search]);
 
     function handleSearch() {
+        const inputElement = document.getElementById("inputSearch");
+        if (list === true){
+            setCityName(inputElement.value)
+        }
         setSpinner(false)
         setTimeout(() => {
             setPage(false);
