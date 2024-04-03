@@ -34,6 +34,7 @@ export const Items =
   {name: "Isparta", country: "TR"},
   {name: "Mersin", country: "TR"},
   {name: "İstanbul", country: "TR"},
+  {name: "istanbul", country: "TR"},
   {name: "İzmir", country: "TR"},
   {name: "Kars", country: "TR"},
   {name: "Kastamonu", country: "TR"},
