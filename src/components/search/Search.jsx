@@ -59,7 +59,12 @@ function Search() {
                                    placeholder="Serach loaction"
                                    type="text"
                                    id="inputSearch"
-                                   onChange={(e) => setSearch(e.target.value)}/>
+                                   onChange={(e) => setSearch(e.target.value)}
+                                    onKeyPress={(e) => {
+                                        if (e.key === "Enter") {
+                                            handleSearch();
+                                        }
+                                    }}/>
                             <button className="h-14 w-14 flex items-center justify-center" onClick={handleSearch}>
                                 <img className={`h-6 ${spinner ? "" : "animate-spin"}`} src={spinner ? arrow : spin} alt="icon"/>
                             </button>
