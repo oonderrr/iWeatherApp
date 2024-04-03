@@ -1,6 +1,5 @@
 import logo from "/src/ui/logo/Logo.svg"
 import background from "/src/ui/background/Background.svg"
-import axios from "axios";
 import {useEffect, useState} from "react";
 import Content from "../content/Content.jsx";
 import arrow from "/src/ui/icon/arrow-right-solid.svg"
