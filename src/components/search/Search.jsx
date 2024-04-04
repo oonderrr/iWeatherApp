@@ -1,6 +1,6 @@
 import logo from "/src/ui/logo/Logo.svg"
 import background from "/src/ui/background/Background.svg"
-import {useEffect, useState} from "react";
+import {useEffect, useRef, useState} from "react";
 import Content from "../content/Content.jsx";
 import arrow from "/src/ui/icon/arrow-right-solid.svg"
 import spin from "/src/ui/icon/spinner-solid.svg"
@@ -13,11 +13,14 @@ function Search() {
     const [list, setList] = useState(true);
     const [spinner, setSpinner] = useState(true);
 
+    const inputRef = useRef();
+
     function handleCityClick(cityName, country) {
         const inputElement = document.getElementById("inputSearch");
         inputElement.value = `${cityName}, ${country}`;
         setCityName(cityName)
         setList(false)
+        inputRef.current.focus()
     }
 
     useEffect(() => {
@@ -60,11 +63,12 @@ function Search() {
                                    type="text"
                                    id="inputSearch"
                                    onChange={(e) => setSearch(e.target.value)}
-                                    onKeyPress={(e) => {
+                                   onKeyPress={(e) => {
                                         if (e.key === "Enter") {
                                             handleSearch();
                                         }
-                                    }}/>
+                                   }}
+                                   ref={inputRef}/>
                             <button className="h-14 w-14 flex items-center justify-center" onClick={handleSearch}>
                                 <img className={`h-6 ${spinner ? "" : "animate-spin"}`} src={spinner ? arrow : spin} alt="icon"/>
                             </button>
