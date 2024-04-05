@@ -35,8 +35,8 @@ function Content({ city }) {
                 {
                     error ? <ErrorPage /> :
 
-                        <div className="h-screen w-full overflow-auto bg-gray-900 p-5">
-                            <button className="w-8 m-2 sm:absolute flex justify-center items-center"
+                        <div className="h-lvh w-full overflow-auto bg-gray-900 p-5">
+                            <button className="w-8 m-2 flex justify-center items-center"
                                     onClick={() => {window.location.reload();}}>
                                 <img className="rotate-180 hover:opacity-80 duration-300" src={arrow} alt="icon"/>
                             </button>
@@ -45,7 +45,7 @@ function Content({ city }) {
                                     <p className="text-white text-md">Hava durumu verileri yükleniyor...</p>
                                 </div>) : (
                                 <>
-                                <div className="flex flex-col justify-center items-center gap-2 h-full p-5 md:p-0">
+                                <div className="flex flex-col justify-center items-center gap-2 h-full p-5 md:mt-5 md:p-0">
                                         <div className="lg:flex lg:gap-2">
                                             <Card/>
                                             <WeatherDetail/>
