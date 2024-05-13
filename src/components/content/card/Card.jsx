@@ -115,7 +115,7 @@ function Content() {
                             </div>
                         </div>
                         <div className="w-40 h-40 md:p-3 flex justify-center items-center overflow-hidden">
-                            <img className="w-32 h-32 md:w-40 md:h-40 object-cover" src={icon} alt="ixon"/>
+                            <img className="w-32 h-32 md:w-32 md:h-32 object-cover" src={icon} alt="ixon"/>
                         </div>
                     </div>
                 </div>
